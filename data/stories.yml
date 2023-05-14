@@ -1,0 +1,138 @@
+version: "2.0"
+stories:
+- story: intro
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: order shoes
+  steps:
+  - intent: order_shoes
+  - action: utter_order_shoes
+
+# cancel stories
+
+- story: User stops product_stock
+  steps:
+  - active_loop: product_stock_form
+  - intent: deny
+  - action: utter_start_over
+  - action: utter_greet
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: User stops order_status
+  steps:
+  - active_loop: order_status_form
+  - intent: deny
+  - action: utter_start_over
+  - action: utter_greet
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: User stops cancel_form
+  steps:
+  - active_loop: cancel_form
+  - intent: deny
+  - action: utter_start_over
+  - action: utter_greet
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: User stops return_form
+  steps:
+  - active_loop: return_form
+  - intent: deny
+  - action: utter_start_over
+  - action: utter_greet
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: User stops product_updates_form
+  steps:
+  - active_loop: product_updates_form
+  - intent: deny
+  - action: utter_start_over
+  - action: utter_greet
+  - action: action_deactivate_loop
+  - active_loop: null
+
+# this is to demonstrate adding metadata to a response
+- story: user asks for name
+  steps:
+  - intent: whats_your_name
+  - action: action_give_name
+
+
+- story: Place an order
+  steps:
+    - intent: make_an_order
+    - action: order_form
+    - active_loop: order_form
+    - slot_was_set:
+        - requested_slot: product
+    - action: order_form
+    - active_loop: order_form
+    - slot_was_set:
+        - product: widget
+    - action: order_form
+    - active_loop: order_form
+    - slot_was_set:
+        - requested_slot: name
+    - action: order_form
+    - active_loop: order_form
+    - intent: provide_name
+      entities:
+        - name: John
+    - slot_was_set:
+        - name: John
+    - action: order_form
+    - active_loop: order_form
+    - slot_was_set:
+        - requested_slot: email
+    - action: order_form
+    - active_loop: order_form
+    - intent: provide_email
+      entities:
+        - email: john@example.com
+    - slot_was_set:
+        - email: john@example.com
+    - action: order_form
+    - active_loop: order_form
+    - slot_was_set:
+        - requested_slot: phone
+    - action: order_form
+    - active_loop: order_form
+    - intent: provide_phone_number
+      entities:
+        - phone_number: 34567890
+    - slot_was_set:
+        - phone: 34567890
+    - action: order_form
+    - active_loop: order_form
+    - slot_was_set:
+        - requested_slot: quantity
+    - action: order_form
+    - active_loop: order_form
+    - intent: provide_quantity
+      entities:
+        - quantity: 5
+    - slot_was_set:
+        - quantity: 5
+    - action: order_form
+    - active_loop: order_form
+    - slot_was_set:
+        - requested_slot: delivery_address
+    - action: order_form
+    - active_loop: action_take_order
+
+- story: Submit Order
+  steps:
+  - intent: affirm
+  - action: order_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit_order
+
+

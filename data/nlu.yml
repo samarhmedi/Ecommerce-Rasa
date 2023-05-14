@@ -1,0 +1,365 @@
+version: "2.0"
+nlu:
+- intent: order_status
+  examples: |
+    - check status of my order
+    - when are my shoes coming in
+    - when will they get here
+    - I'd like to check the status of my order pls
+    - check status
+    - I'd like an update on my order
+    - Check status of my order
+    - I haven't received my order yet, can we check that?
+    - where is my order?
+    - I want to check the status of my order
+    - actually can I check the status of my order
+    - order status for example@rasa.com
+    - Je veux vérifier l'état de ma commande
+    - n7eb nchouf commande mte3i win woslet 
+    - n7eb na3ref win commande 
+
+- intent: order_cancel
+  examples: |
+    - i'd like to cancel my order
+    - cancel my shoes
+    - I changed my mind on my order
+    - cancel my order
+    - n7eb n'annuli 
+    - je veux annuler ma commande 
+    - annuler 
+    - annuler ma commande
+  
+- intent: return
+  examples: |
+    - start a return
+    - I don't want my shoes anymore
+    - how do I return these?
+    - return some shoes
+    - Which items are available to return?
+    - Start a return
+    - Okay. I would like to return some shoes I bought
+    - yeah I want to return something
+    - Je souhaite retourner ma commande
+- intent: product_stock
+  examples: |
+    - do you have any [bjawia](product) in stock?
+    - what about [5kg](kaak) shoes
+    - what's your inventory
+    - check inventory
+    - do you have my special offer in stock
+    - Check inventory
+    - i'm looking for new offer
+    - chnoua 3andkom 
+    - 3andkom coffret eid? 
+    - famma des promotions? 
+    - avez-vous mon offre spéciale en stock
+    
+- intent: product_updates
+  examples: |
+    - what's new on the site?
+    - how do I find out updates
+    - I'd like to sign up for updates
+    - Subscribe to product updates
+    - subscribe to updates
+    - i [don't](negation) want to subscribe
+    - I [do not](negation) subscribe
+    
+- intent: inform
+  examples: |
+    - example@rasa.com
+    - my email is example@yahoo.com
+    - it's example@gmail.com
+    - [1kg](quantity) kaak
+    - [3.5kg](quantity) baklawa
+    - I'm looking for [Samsa](product)
+    - [bjawia](product)
+    - [mlabes](product)
+    - it's 123
+    - it's a@b.com
+    - xyz@hulaloo.ai
+    - gray
+    - [200mg](quantity) and [3kg](quantity)
+    - wait actually that email is wrong. it should be asdf1@asdf.com
+    - asdf@asdf.com
+    - [libnais](product)
+    - test@test.com
+- intent: order_shoes
+  examples: |
+    - i want to buy shoes
+    - no, don't want to do a return, want to purchase new shoes
+    - since they're in stock, how about I place an order
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - oui 
+    - parfait
+    - d'accord
+    - ok 
+    - mrigle
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - Nah, I would not like to be added to the list
+    - nope
+    - u stink
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - HEY
+    - heyy
+    - Hey!!!
+    - hallo?
+    - hi there
+    - hellooo
+    - salut
+    - salem
+    - aaslema 
+    - aaslemaa
+    - cc
+    - slt
+    - slm
+    - slmt
+    - coucou
+    - bonjour
+    - bonsoir
+    - salam
+
+- intent: faq/ask_cost
+  examples: |
+    - how much is this?
+    - how much does it cost?
+    - how much does it cost to ship?
+    - how much does shipping cost?
+    - how much does shipping cost to [Tunis](address)? 
+    - b9adeh livraison?
+    - b9adeh?
+    - quel est le montant des frais d'expédition ?
+    - combien coûte la livraison ?
+    - combien coûte t
+
+
+
+
+
+
+- intent: faq/alternate_info
+  examples: |
+    - Can I provide a phone number instead?
+    - Can anyone look up my status with my e-mail address?
+- intent: faq/sizing_clarification
+  examples: |
+    - American or european sizing?
+- intent: faq/payment_methods
+  examples: |
+    - what kind of payment methods do you offer?
+    - how do I pay
+- intent: faq/promotions
+  examples: |
+    - what kind of deals do you have
+    - are you running anything for black friday
+- intent: chitchat/thanks
+  examples: |
+    - thx
+    - Awesome, thanks!
+    - thanks mate
+    - thank you
+    - merci 
+    - 3aychek 
+    - merci beaucoup
+
+- intent: chitchat/confirm_presence
+  examples: |
+    - are you there?
+- intent: chitchat/capabilities
+  examples: |
+    - What else can you do?
+    - what can you do?
+- intent: chitchat/mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - cool beans
+- intent: chitchat/mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - this is not working
+    - you suck
+- intent: chitchat/bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: chitchat/goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - bye 
+    
+    
+- intent: out_of_scope
+  examples: |
+    - mmm I can't see what you're saying
+    - I am looking forward to my best friend's wedding. Do you have any tuxedo's?
+    - hmmmm
+    - Can I?
+    - Well, okay then
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+    - why is the sky blue
+    - blah blah blah
+- intent: whats_your_name
+  examples: |
+    - can you tell me your name?
+    - what's your name?
+
+
+- intent: provide_name
+  examples: |
+    - My name is [John](name)
+    - I'm [Sarah](name)
+    - You can call me [Dave](name)
+    - esmi [Foulen](name)
+    - [foulen](name)
+    - [mounir ben rahmen](name)
+    - je suis [yasmin](name)
+
+- intent: provide_address
+  examples: |
+    - My address is [123 Main St.](address)
+    - I live at [456 Elm St.](address)
+    - [789 Pine St.](address) is my address.
+    - adresse [Av.Taieb Mhiri Tunis](address)
+    - [ariana](address)
+    - mon adresse est [Hammamet] (address)
+
+- intent: provide_phone_number
+  examples: |
+    - My phone number is [55 551 234](phone)
+    - You can reach me at [+216 53-456-789](phone)
+    - My number is [96-456-789](phone)
+    - mon num [56 236 559](phone)
+    - noumrouya [56778899](phone)
+    - 25698753
+    - 25789413
+    - +216 54689753
+    - 25 236 256 
+    
+
+
+- intent: provide_order
+  examples: |
+    - I would like to order [2kg](quantity) [baklawa](product)
+    - Can I get [1kg](quantity) [kaak](product)?
+    - I want to order [3kg](quantity) [7lou](product)
+  
+- intent: make_an_order
+  examples: |
+    - I want to make an order 
+    - n7eb n3adi commande 
+    - je veux passer une commande 
+    - n7eb necmandi
+    - make an order
+    - take an order 
+    - order
+    - order please
+    - order now
+    - order now please
+    - commande
+    - commande s'il vous plait
+    - commande maintenant
+    - commande maintenant s'il vous plait
+
+
+- intent: provide_quantity
+  examples: |
+    - I would like to order [2kg](quantity) 
+    - Can I get [1kg](quantity) ?
+    - I want to order [3kg](quantity)
+    - 2kg
+    - 100mg
+
+- intent: provide_product
+  examples: |
+    - [baklawa](product)
+    - [kaak](product)?
+    - [7lou](product)
+    - bjawia
+    - zrir
+    - kaak
+
+- intent: provide_email
+  examples: |
+    - My email is [rasa@gmail.com](email)
+    - You can reach me at [salah@gmail.com](email)
+    - foulen@outlook.com
+    - mon email est [ sarah1@gmail.com](email)
+    - [rasa@example.com]
+

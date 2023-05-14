@@ -1,0 +1,8 @@
+{
+  "rule_only_slots": [
+    "survey_complete"
+  ],
+  "rule_only_loops": [
+    "survey_form"
+  ]
+}
