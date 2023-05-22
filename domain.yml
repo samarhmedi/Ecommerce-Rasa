@@ -202,6 +202,8 @@ responses:
   - text: We accept all major credit cards, Apple Pay, Google Pay, and PayPal.
   utter_faq/promotions:
   - text: Currently, we're running a buy one get one half off promotion!
+  utter_faq/ask_cost:
+  - text: give me the quantity so i can check the full price.
   utter_chitchat/thanks:
   - text: No problem!
   - text: I have no choice but to help you.

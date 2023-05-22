@@ -1,0 +1,60 @@
+/* Chat container */
+.chat-container {
+                                            max-width: 400px;
+                                            height: 500px;
+                                            border: 1px solid #ccc;
+                                            padding: 10px;
+                                            margin: 0 auto;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: flex-end;
+                                          }
+                                          
+                                          /* Chat display area */
+                                          #chat-display {
+                                            flex-grow: 1;
+                                            overflow-y: auto;
+                                            padding: 10px;
+                                          }
+                                          
+                                          /* User message style */
+                                          .message.user {
+                                            background-color: #f2f2f2;
+                                            color: #333;
+                                            padding: 8px 12px;
+                                            border-radius: 5px;
+                                            align-self: flex-end;
+                                            margin-bottom: 6px;
+                                          }
+                                          
+                                          /* Bot message style */
+                                          .message.bot {
+                                            background-color: #e4f1fe;
+                                            color: #333;
+                                            padding: 8px 12px;
+                                            border-radius: 5px;
+                                            align-self: flex-start;
+                                            margin-bottom: 6px;
+                                          }
+                                          
+                                          /* User input field and submit button */
+                                          #message-form {
+                                            display: flex;
+                                            margin-top: 10px;
+                                          }
+                                          
+                                          #user-input {
+                                            flex-grow: 1;
+                                            padding: 8px;
+                                            border-radius: 5px 0 0 5px;
+                                            border: 1px solid #ccc;
+                                          }
+                                          
+                                          button[type="submit"] {
+                                            padding: 8px 12px;
+                                            border-radius: 0 5px 5px 0;
+                                            border: 1px solid #ccc;
+                                            background-color: #f2f2f2;
+                                            cursor: pointer;
+                                          }
+                                          
